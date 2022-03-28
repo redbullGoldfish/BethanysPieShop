@@ -8,20 +8,16 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShopHRM.App.Pages
 {
-	public partial class EmployeeDetail
-	{
-		[Parameter]
-		public string EmployeeId { get; set; } 
-
-
-		public Employee Employee { get; set; } = new Employee();
-
-		[Inject]
-		public IEmployeeDataService EmployeeDataService { get; set; }
-
-		protected async override Task OnInitializedAsync()
-		{
-			Employee = await EmployeeDataService.GetEmployeeDetails(int.Parse(EmployeeId));
-		}
-	}
+    public partial class EmployeeDetail
+    {
+        [Parameter]
+        public string EmployeeId { get; set; }
+        public Employee Employee { get; set; } = new Employee();
+        [Inject]
+        public IEmployeeDataService EmployeeDataService { get; set; }
+        protected override async Task OnInitializedAsync()
+        {
+            Employee = await EmployeeDataService.GetEmployeeDetails(int.Parse(EmployeeId));
+        }
+    }
 }

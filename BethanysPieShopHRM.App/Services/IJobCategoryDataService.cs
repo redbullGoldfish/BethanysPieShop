@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BethanysPieShopHRM.App.Services
 {
-	public interface IJobCategoryDataService
-	{
-		Task<IEnumerable<JobCategory>> GetAllJobCategories();
-		Task<JobCategory> GetJobCategoryById(int jobCategoryId);
-	}
+    public interface IJobCategoryDataService
+    {
+        Task<IEnumerable<JobCategory>> GetAllJobCategories();
+        Task<JobCategory> GetJobCategoryById(int jobCategoryId);
+    }
 }
